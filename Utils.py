@@ -7,7 +7,9 @@ score_print = "You're right!!! Your score is"
 
 
 def screen_cleaner():
-    os.system('cls')
+	os.system('clear')
+	# for windows use
+	# os.system('cls')
 
 
 # Used in Live.py
