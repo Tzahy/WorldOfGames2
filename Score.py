@@ -7,7 +7,7 @@ from Utils import score_print, is_file_exists
 # If the file not exists print a message, create the file, and add the score.
 # Each game the score will be added to the previous score.
 # The score will printed to the screen and to the browser by the flask server:
-# I configured the server to run at: http://127.0.0.1:8080/ URL (in MainScores.py file).
+# I configured the server to run at: http://127.0.0.1:8080/ URL (in MainScores.py file) when running outside of container.
 def add_score(points):
     try:
         score_file = open(scores_file_name, 'r')
@@ -23,3 +23,15 @@ def add_score(points):
         score_file.write(str(points))
         print(score_print, str(points))
         score_file.close()
+		
+		
+def initialize_score(points):
+	try:
+		score_file = open(scores_file_name, 'w')
+		score_file.write(str(points))
+		score_file.close()
+	except FileNotFoundError:
+		print(is_file_exists)
+		score_file = open(scores_file_name, 'w')
+		score_file.write(str(points))
+		score_file.close()
