@@ -19,7 +19,7 @@ agent any
 	}
 	post {
         always {
-            python tests/e2e.py
+            python 'tests/e2e.py'
         }
         failure {
 			sh 'Test Fail!!!'
