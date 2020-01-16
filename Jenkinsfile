@@ -13,8 +13,19 @@ agent any
         }
 		stage('run test') {
             steps {
-                sh 'python tests/e2e.py'
+                sh 'echo running test...'
             }
+        }
+	}
+	post {
+        always {
+            python tests/e2e.py
+        }
+        failure {
+			sh 'Test Fail!!!'
         }
     }
 }
+
+
+	
