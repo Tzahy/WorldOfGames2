@@ -3,7 +3,6 @@ from Live import load_game, welcome
 from Utils import screen_cleaner
 from MainScores import score_server
 import Score
-#from Score import initialize_score
 
 # initialize Scores.txt to 0
 Score.initialize_score(0)
