@@ -11,5 +11,10 @@ agent any
                 sh 'docker-compose up'
             }
         }
+		stage('run test') {
+            steps {
+                sh 'python tests/e2e.py'
+            }
+        }
     }
 }
