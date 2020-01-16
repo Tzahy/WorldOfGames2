@@ -21,9 +21,6 @@ agent any
         always {
             python 'tests/e2e.py'
         }
-        failure {
-			sh 'Test Fail!!!'
-        }
     }
 }
 

@@ -3,4 +3,4 @@ COPY . /usr/src/app/WorldOfGames
 WORKDIR /usr/src/app/WorldOfGames
 RUN pip install --no-cache-dir -r /usr/src/app/WorldOfGames/requirements.txt
 
-CMD ["sh", "python MainScores.py > MainScores.log 2>&1"] 
+CMD [ "python", "MainScores.py" ] 
