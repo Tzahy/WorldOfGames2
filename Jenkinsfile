@@ -13,7 +13,7 @@ agent any
         }
 		stage('run test') {
             steps {
-                sh 'echo test'
+                sh 'python tests/e2e.py'
             }
         }
     }
