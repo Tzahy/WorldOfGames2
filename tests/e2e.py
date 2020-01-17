@@ -30,9 +30,9 @@ def test_scores_service(app_url):
 
 
 def main_function():
-    # run the test function and get its status (True or False)
-    test_succeed = test_scores_service("http://192.168.99.100:8777")
-    # check the status and print the test result(s to the console
+	# run the test function and get its status (True or False)
+	test_succeed = test_scores_service("http://192.168.99.100:8777")
+	# check the status and print the test result(s to the console
 	if test_succeed:
 		print("Test Pass!")
 	else:
