@@ -14,12 +14,12 @@ agent any
 		stage('run test') {
             steps {
 				sh 'python tests/e2e.py'
+				if (rc != 0) 
+				{ 
+					sh "echo 'exit code is NOT zero'"
+				} 
             }
         }
-	}
-	catchError {
-		sh 'docker stop jenkinspipelinewithgithub_project_1'
-		sh 'docker rmi -f jenkinspipelinewithgithub_project_1'
 	}
 }
 
