@@ -14,12 +14,16 @@ agent any
 		stage('run test') {
             steps {
 				sh 'python tests/e2e.py'
-				if (rc != 0) 
-				{ 
-					sh "echo 'exit code is NOT zero'"
-				} 
             }
         }
+		post {
+			success {
+				echo "${env.BUILD_URL} has result success"
+			}
+			failure {
+				echo "${env.BUILD_URL} has result fail"
+			}
+		}
 	}
 }
 
