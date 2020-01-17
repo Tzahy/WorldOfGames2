@@ -36,7 +36,7 @@ def main_function():
     if test_succeed:
         print("Test Pass!")
     else:
-        print("Test Fail!")
+       exit 1
 
 
 # run main function
