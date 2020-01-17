@@ -15,11 +15,11 @@ agent any
             steps {
 				sh 'python tests/e2e.py'
             }
-			catchError {
+        }
+		catchError {
 				sh 'docker stop jenkinspipelinewithgithub_project_1'
 				sh 'docker rmi -f jenkinspipelinewithgithub_project_1'
-			}
-        }
+		}
 	}
 }
 
