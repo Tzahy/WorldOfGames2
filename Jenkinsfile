@@ -8,7 +8,7 @@ agent any
         }
         stage('build image and run container') {
             steps {
-                sh 'docker-compose up'
+                sh 'docker-compose up -d'
             }
         }
 		stage('run test') {
