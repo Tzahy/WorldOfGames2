@@ -37,7 +37,7 @@ def main_function():
 		print("Test Pass!")
 	else:
 		print("Test Failed! exiting...")
-		exit 1
+		return sys.exit(-1)
 
 
 # run main function
