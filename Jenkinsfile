@@ -17,7 +17,7 @@ agent any
             }
         }
 	}
-node catchError {
+	catchError {
 		sh 'docker stop jenkinspipelinewithgithub_project_1'
 		sh 'docker rmi -f jenkinspipelinewithgithub_project_1'
 	}
