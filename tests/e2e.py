@@ -34,10 +34,10 @@ def main_function():
     test_succeed = test_scores_service("http://192.168.99.100:8777")
     # check the status and print the test result(s to the console
     if test_succeed:
-        print("Test Pass!")
+		print("Test Pass!")
     else:
-	   print("Test Failed! exiting...")
-       exit 1
+		print("Test Failed! exiting...")
+		exit 1
 
 
 # run main function
