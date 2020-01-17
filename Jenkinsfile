@@ -23,7 +23,9 @@ agent any
 			echo "${env.BUILD_URL} has result success"
 		}
 		failure {
-			echo "${env.BUILD_URL} has result fail"
+			echo "${env.BUILD_URL} has result fail, terminate container..."
+			sh 'docker stop jenkinspipelinewithgithub_project_1'
+			sh 'docker rmi -f jenkinspipelinewithgithub_project'
 		}
      }
 }
