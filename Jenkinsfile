@@ -8,12 +8,12 @@ agent any
         }
         stage('build image and run container') {
             steps {
-                sh 'docker-compose up -d'
+				sh 'docker-compose up -d'
             }
         }
 		stage('run test') {
             steps {
-                python 'tests/e2e.py'
+				sh 'python tests/e2e.py'
             }
         }
 	}
